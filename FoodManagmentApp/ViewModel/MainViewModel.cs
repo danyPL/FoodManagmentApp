@@ -32,7 +32,7 @@ namespace FoodManagmentApp.ViewModel
         private async void ShowDetails(Dish dish)
         {
             if (dish != null)
-                await _navigation.PushAsync(new EditPage(dish));
+                await _navigation.PushAsync(new EditPage(dish, _navigation));
         }
     }
 }
