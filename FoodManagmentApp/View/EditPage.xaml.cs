@@ -6,18 +6,16 @@ namespace FoodManagmentApp.View;
 public partial class EditPage : ContentPage
 {
     public Dish SelectedDish { get; set; }
-    public Command SaveCmd { get; }
 
     public EditPage(Dish dish)
 	{
 		InitializeComponent();
 		BindingContext = dish;
         SelectedDish = dish;
-        SaveCmd = new Command(SaveEditDish);
 
     }
   
-    public async void SaveEditDish()
+    public async void SaveEditDish(object sender, EventArgs e)
     {
         SelectedDish.SaveData(SelectedDish.Name, SelectedDish.Type, SelectedDish.Description, SelectedDish.Price, SelectedDish.Ingredients);
     }

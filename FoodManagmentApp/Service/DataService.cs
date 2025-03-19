@@ -12,7 +12,8 @@ namespace FoodManagmentApp.Service
     public class DataService
     {
        public ObservableCollection<Dish> Dishes { get; set; }
-   
+        public Dish SelectedDish { get; set; }
+
         public DataService()
         {
             Dishes = new()
